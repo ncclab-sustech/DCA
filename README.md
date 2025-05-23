@@ -23,7 +23,7 @@ Place your ROI masks in data/mask/. This implementation supports customization f
 
 Ensure data/sub_test.txt contains the list of subject IDs (one per line), we have placed a demo text.
 
-The pretrained model (swin_model_epoch_30.pth) is automatically loaded if present.
+The pretrained model (swin_model_epoch_30.pth) is automatically loaded if present. We conduct pre-training using monai (https://monai.io/) and customize some functions through data/swin_unetry.py
 
 
 2. Run DCA
