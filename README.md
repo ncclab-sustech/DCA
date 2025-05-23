@@ -20,6 +20,8 @@ Place your ROI masks in data/mask/. This implementation supports customization f
 
 Ensure data/sub_test.txt contains the list of subject IDs (one per line), we have placed a demo text.
 
+The pretrained model (swin_model_epoch_30.pth) is automatically loaded if present.
+
 2. Run DCA
 
 ```bash
@@ -38,7 +40,8 @@ You can customize key inference settings via arguments in `main.py`. The main op
 
 ⚠️ Validation requires more computing resources. If `--vali` is set to `False`, we recommend using `--epoch < 10` to avoid overfitting.
 
+3.Results
 
-4. Notes
-The pretrained model (swin_model_epoch_30.pth) is automatically loaded if present.
+Output can be found in data/results/demo
+
 
