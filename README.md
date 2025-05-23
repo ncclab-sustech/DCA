@@ -10,7 +10,7 @@ This repository contains the implementation of **DCA: Graph-Guided Deep Embeddin
 
 0. Dependencies
 
-We recommend using Python `==3.9.21`.
+We recommend using `Python == 3.9.21`.
 
 All required packages are listed in `DCA/req_trim.txt`. 
 
@@ -50,3 +50,9 @@ You can customize key inference settings via arguments in `main.py`. The main op
 Output can be found in data/results/demo
 
 ## AtlaScore Usage
+### Downstream
+For all the operation instructions, please see `demo.ipynb`.
+
+### Similarity
+- Provide fMRI data `shape=(x,y,z,t)` and the atlas file `shape=(x,y,z)` to be evaluated, modify the paths in `eva.py`, and run the command `python eva.py`.
+- To evaluate DCBC, you must provide the following files mapped to cortical surface vertices: fMRI data, vertex distance file, and parcellation file. Refer to [Zhi et al.](https://github.com/DiedrichsenLab/DCBC) for more detailed methodological instructions.
