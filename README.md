@@ -5,15 +5,18 @@ This repository contains the implementation of **DCA: Graph-Guided Deep Embeddin
 
 ![](fig.png)
 
-##  Dependencies
+
+## DCA Usage
+
+0. Dependencies
 
 We recommend using Python `==3.9.21`.
 
-All required packages are listed in `DCA/req_trim.txt`. You can install them with:
+All required packages are listed in `DCA/req_trim.txt`. 
 
 
-## DCA Usage
 1. Prepare Data
+   
 Place preprocessed 4D fMRI volumes in data/fmri/, we have placed a demo fMRI.
 
 Place your ROI masks in data/mask/. This implementation supports customization for gray matter, white matter, and subcortex-specific atlases. We have placed a demo mask.
@@ -21,6 +24,7 @@ Place your ROI masks in data/mask/. This implementation supports customization f
 Ensure data/sub_test.txt contains the list of subject IDs (one per line), we have placed a demo text.
 
 The pretrained model (swin_model_epoch_30.pth) is automatically loaded if present.
+
 
 2. Run DCA
 
@@ -40,8 +44,9 @@ You can customize key inference settings via arguments in `main.py`. The main op
 
 ⚠️ Validation requires more computing resources. If `--vali` is set to `False`, we recommend using `--epoch < 10` to avoid overfitting.
 
-3.Results
+
+3. Results
 
 Output can be found in data/results/demo
 
-
+## AtlaScore Usage
