@@ -3,7 +3,7 @@
 
 This repository contains the implementation of **DCA: Graph-Guided Deep Embedding Clustering for Brain Atlases**. The method integrates pretraining and spatial graph-based constraints to generate anatomically and functionally meaningful brain atlases.
 
-![DCA](figs.png)
+![](fig.png)
 
 ##  Dependencies
 
