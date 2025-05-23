@@ -1,0 +1,10 @@
+scikit-learn
+tensorboard
+monai
+matplotlib
+torch_geometric
+nibabel
+pyzstd
+pandas
+einops
+cupy-cuda12x

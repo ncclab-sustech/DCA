@@ -1,0 +1,5 @@
+DCA/data/fmri/101915_FWHM6.nii.gz filter=lfs diff=lfs merge=lfs -text
+DCA/data/fmri/101915_raw.nii.gz filter=lfs diff=lfs merge=lfs -text
+AtlaScore/downstream/fc_data/fc_data.zip filter=lfs diff=lfs merge=lfs -text
+DCA/data/swin_model_epoch_30.pth filter=lfs diff=lfs merge=lfs -text
+DCA/data/fmri/101915_FWHM3.nii.gz filter=lfs diff=lfs merge=lfs -text
