@@ -42,7 +42,7 @@ You can customize key inference settings via arguments in `main.py`. The main op
 - `-e`, `--epoch`: Maximum training epochs (default: `8`)
 - `-v`, `--vali`: Whether to keep the best atlas based homogeneity (default: `True`)
 
-⚠️ Validation requires more computing resources. If `--vali` is set to `False`, we recommend using `--epoch < 10` to avoid overfitting.
+ Validation requires more computing resources. If `--vali` is set to `False`, we recommend using `--epoch < 10` to avoid overfitting.
 
 
 3. Results
