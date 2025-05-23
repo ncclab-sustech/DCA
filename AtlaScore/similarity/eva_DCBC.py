@@ -229,6 +229,18 @@ def ecbc(data, dist, parcellation):
 
 
 if __name__ == "__main__":
-    pass
+    hemisphere = 'L'
+    geodesic = np.load('/path/to/your/dist/file') # npz file
+    dist = geodesic['arr_0']
+    print(f'Geodesic distance shape: {dist.shape}')
 
+    parcellation = nib.load('/path/to/your/atlas/on/surface').darrays[0].data
+    print(f'Parcellation shape: {parcellation.shape}')
 
+    data = nib.load('/path/to/your/fmri/on/surface')
+    surf = [x.data for x in data.darrays]
+    surf = np.array(surf).T
+    print(f'FMRI data shape: {surf.shape}')
+    
+    dcbc = ecbc(surf, dist, parcellation)
+    print(dcbc['DCBC'])
