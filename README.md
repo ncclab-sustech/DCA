@@ -17,9 +17,12 @@ All required packages are listed in `DCA/req_trim.txt`.
 
 1. Prepare Data
    
-Place preprocessed 4D fMRI volumes in data/fmri/, we have placed a demo fMRI.
 
-Place your ROI masks in data/mask/. This implementation supports customization for gray matter, white matter, and subcortex-specific atlases. We have placed a demo mask.
+Use `DCA/data/data_preparation.ipynb` to prepare both fMRI and mask data: fMRI inputs should be resting-state scans normalized to the MNI152 space with at least 300 TRs (note that if TR ≠ 0.72 s, it is recommended to resample temporally to 0.72 s beforehand, as this step is not included in the notebook), and mask inputs should be the corresponding FreeSurfer `aparc+aseg.nii.gz` already registered in MNI152 space.
+
+Place preprocessed 4D fMRI volumes in `DCA/data/fmri/`, we have placed a demo fMRI.
+
+Place your ROI masks in `DCA/data/mask/`. This implementation supports customization for gray matter, white matter, and subcortex-specific atlases. We have placed a demo mask.
 
 Ensure data/sub_test.txt contains the list of subject IDs (one per line), we have placed a demo text.
 
@@ -35,7 +38,7 @@ python main.py
 This will generate subject-level brain parcellations using the provided pretrained model. Results will be saved to results/demo/.
 
  Command-line Options
- 
+
 You can customize key inference settings via arguments in `main.py`. The main options are:
 
 - `-k`, `--n_clusters`: Number of parcels to generate (default: `100`)
