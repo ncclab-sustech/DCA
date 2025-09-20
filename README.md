@@ -1,7 +1,7 @@
 
 # DCA: Graph-Guided Deep Embedding Clustering for Brain Atlases
 
-This repository contains the implementation of **DCA: Graph-Guided Deep Embedding Clustering for Brain Atlases**. The method integrates pretraining and spatial graph-based constraints to generate anatomically and functionally meaningful brain atlases.
+This repository contains the official implementation of our **NeurIPS 2025** paper [**DCA: Graph-Guided Deep Embedding Clustering for Brain Atlases**](https://arxiv.org/abs/2509.01426). The method integrates pretraining and spatial graph-based constraints to generate anatomically and functionally meaningful brain atlases.
 
 ![](fig.png)
 
@@ -59,3 +59,14 @@ For all the operation instructions, please see `demo.ipynb`.
 ### Similarity
 - Provide fMRI data `shape=(x,y,z,t)` and the atlas file `shape=(x,y,z)` to be evaluated, modify the paths in `eva.py`, and run the command `python eva.py`.
 - To evaluate DCBC, you must provide the following files mapped to cortical surface vertices: fMRI data, vertex distance file, and parcellation file. Refer to [Zhi et al.](https://github.com/DiedrichsenLab/DCBC) for more detailed methodological instructions.
+
+## Citations
+If you find our work useful for your research, please consider citing our paper:
+```bibtex
+@article{wang2025dca,
+  title={DCA: Graph-Guided Deep Embedding Clustering for Brain Atlases},
+  author={Wang, Mo and Peng, Kaining and Tang, Jingsheng and Wen, Hongkai and Liu, Quanying},
+  journal={arXiv preprint arXiv:2509.01426},
+  year={2025}
+}
+```

@@ -26,7 +26,6 @@ def evaluate(input_file, label_file, adj_dict):
     input_matrix = input_matrix[:,:,:,:300]
     # print(input_matrix.shape) # (96, 96, 96, 60)
 
-    # 加载标签文件
     # img_label = nib.load(label_file)
     if label_file.endswith('nii.gz'):
         label_matrix = nib.load(label_file)
@@ -51,7 +50,6 @@ def evaluate(input_file, label_file, adj_dict):
             voxel_counts[label] = len(voxel_indices)
             silhouette_scores[label] = np.nan
             continue
-        # 提取这些体素的时间序列
         time_series = input_matrix[voxel_indices[:, 0], voxel_indices[:, 1], voxel_indices[:, 2], :]
         n_voxels = time_series.shape[0]
 
