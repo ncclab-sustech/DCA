@@ -2,6 +2,7 @@
 # DCA: Graph-Guided Deep Embedding Clustering for Brain Atlases 
 <a href="https://arxiv.org/abs/2509.01426"><img src="https://img.shields.io/badge/Paper-Arxiv-darkred.svg" alt="Paper"></a>
 <a href="https://polyformproject.org/licenses/noncommercial/1.0.0/"><img src="https://img.shields.io/badge/License-PolyForm--NC--1.0.0-blueviolet.svg" alt="License: PolyForm Noncommercial 1.0.0"></a>
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue)](https://huggingface.co/OneMore1/DCA)
 
 This repository contains the official implementation of our **NeurIPS 2025** paper (5554, Poster) [**DCA: Graph-Guided Deep Embedding Clustering for Brain Atlases**](https://arxiv.org/abs/2509.01426). The method integrates pretraining and spatial graph-based constraints to generate anatomically and functionally meaningful brain atlases.
 
@@ -28,7 +29,7 @@ Place your ROI masks in `DCA/data/mask/`. This implementation supports customiza
 
 Ensure data/sub_test.txt contains the list of subject IDs (one per line), we have placed a demo text.
 
-The pretrained model (swin_model_epoch_30.pth) is automatically loaded if present. We conduct pre-training using monai (https://monai.io/) and customize some functions through DCA/swin_unetr.py
+The pretrained model (swin_model_epoch_30.pth) is available at https://huggingface.co/OneMore1/DCA. We conduct pre-training using monai (https://monai.io/) and customize some functions through DCA/swin_unetr.py
 
 
 2. Run DCA
@@ -65,10 +66,12 @@ For all the operation instructions, please see `demo.ipynb`.
 ## Citations
 If you find our work useful for your research, please consider citing our paper:
 ```bibtex
-@article{wang2025dca,
-  title={DCA: Graph-Guided Deep Embedding Clustering for Brain Atlases},
+@article{wang2026dca,
+  title={DCA: Graph-guided deep embedding clustering for brain atlases},
   author={Wang, Mo and Peng, Kaining and Tang, Jingsheng and Wen, Hongkai and Liu, Quanying},
-  journal={arXiv preprint arXiv:2509.01426},
-  year={2025}
+  journal={Advances in Neural Information Processing Systems},
+  volume={38},
+  pages={103230--103269},
+  year={2026}
 }
 ```
